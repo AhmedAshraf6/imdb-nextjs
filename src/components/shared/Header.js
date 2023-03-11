@@ -3,6 +3,7 @@ import MenuItem from './MenuItem';
 import { AiFillHome } from 'react-icons/ai';
 import { BsInfoSquareFill } from 'react-icons/bs';
 import Link from 'next/link';
+import DarkModeSwitch from './DarkModeSwitch';
 export default function Header() {
   return (
     <nav className='flex justify-between items-center max-w-6xl sm:mx-auto py-3 sm:py-5 px-3 '>
@@ -10,7 +11,8 @@ export default function Header() {
         <MenuItem title='HOME' address='/' Icon={AiFillHome} />
         <MenuItem title='ABOUT' address='/about' Icon={BsInfoSquareFill} />
       </div>
-      <div>
+      <div className='flex items-center gap-5'>
+        <DarkModeSwitch />
         <Link href='/'>
           <h2 className='text-2xl flex gap-2 items-center'>
             <span className='font-bold bg-amber-500 py-1 px-2 rounded-lg'>
